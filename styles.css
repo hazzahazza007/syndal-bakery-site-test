@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset and base */
 *,
 *::before,
 *::after {
@@ -7,18 +7,17 @@
   box-sizing: border-box;
 }
 
-/* Fonts and base */
 body {
   font-family: 'Work Sans', sans-serif;
   background-color: #fff8f0;
   color: #4a3b2a;
-  line-height: 1.65;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-/* Container */
 .container {
   max-width: 1080px;
   margin: 0 auto;
@@ -32,10 +31,10 @@ body {
   position: sticky;
   top: 0;
   z-index: 9999;
-  transition: box-shadow 0.3s ease, background-color 0.3s ease;
-  box-shadow: none;
   display: flex;
   align-items: center;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  box-shadow: none;
 }
 
 .site-header.scrolled {
@@ -89,8 +88,8 @@ body {
 
 .nav-menu a:hover,
 .nav-menu a:focus-visible {
-  color: #e44a4a;
-  border-bottom: 2px solid #e44a4a;
+  color: #b32a2a;
+  border-bottom: 2px solid #b32a2a;
   outline: none;
 }
 
@@ -152,12 +151,12 @@ body {
   flex-direction: column;
   position: absolute;
   right: 0;
-  top: 40px;
+  top: 56px;
   background: #720405;
-  border-radius: 8px;
-  padding: 1.25rem 2rem;
+  border-radius: 0 0 12px 12px;
+  padding: 1.5rem 2rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-  min-width: 210px;
+  min-width: 220px;
   z-index: 1000;
 }
 
@@ -169,7 +168,7 @@ body {
   margin-bottom: 0;
 }
 
-/* Hero section */
+/* Hero Section */
 .hero {
   position: relative;
   margin-bottom: 4rem;
@@ -177,25 +176,27 @@ body {
   user-select: none;
   overflow: hidden;
   border-radius: 12px;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(114,4,5,0.65) 40%, rgba(114,4,5,0.85) 90%);
-  pointer-events: none;
-  z-index: 1;
-  transition: background 0.4s ease;
+  height: 70vh;
+  max-height: 600px;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff8f0;
 }
 
 .hero-image {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: 70vh;
+  height: 100%;
   object-fit: cover;
-  filter: brightness(0.7);
-  transition: transform 0.8s ease;
+  filter: brightness(0.65);
   border-radius: 12px;
+  transition: transform 0.8s ease;
   will-change: transform;
+  z-index: 0;
 }
 
 .hero:hover .hero-image,
@@ -203,59 +204,58 @@ body {
   transform: scale(1.05);
 }
 
-.hero-text {
+.hero-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff8f0;
-  text-align: center;
-  max-width: 90%;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(114,4,5,0.7) 40%, rgba(114,4,5,0.9) 90%);
+  pointer-events: none;
+  z-index: 1;
+  transition: background 0.4s ease;
+}
+
+.hero-text {
+  position: relative;
   z-index: 2;
-  text-shadow: 1.8px 1.8px 15px rgba(0, 0, 0, 0.9);
+  max-width: 650px;
+  padding: 0 1rem;
   user-select: text;
 }
 
 .hero-text h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
   letter-spacing: 0.06em;
   line-height: 1.1;
 }
 
 .highlight {
-  color: #e44a4a;
+  color: #720405;
   font-style: italic;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff8f0;
-  text-align: center;
-  max-width: 600px;
-  width: 90%;
-  z-index: 2;
-  text-shadow: 1.8px 1.8px 15px rgba(0, 0, 0, 0.9);
-  user-select: text;
+.hero-text p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.6rem;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
 
 .btn-primary {
-  background-color: #e44a4a;
+  background-color: #720405;
   color: #fff8f0;
   font-weight: 700;
-  font-size: 1.15rem;
-  padding: 0.85rem 2.5rem;
+  font-size: 1.2rem;
+  padding: 0.9rem 3rem;
   border-radius: 50px;
   text-decoration: none;
-  box-shadow: 0 8px 20px rgba(228, 74, 74, 0.4);
+  box-shadow: 0 8px 20px rgba(114, 4, 5, 0.5);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   display: inline-block;
   cursor: pointer;
+  user-select: none;
 }
 
 .btn-primary:hover,
@@ -269,9 +269,9 @@ body {
 h2 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: #720405;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   text-align: center;
   letter-spacing: 0.04em;
 }
@@ -322,7 +322,7 @@ h2 {
 .card h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin: 1rem 1.5rem 0.4rem;
   color: #720405;
 }
@@ -337,7 +337,7 @@ h2 {
 
 /* Sections */
 .section {
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 }
 
 /* About, Catering, Contact sections */
@@ -400,7 +400,7 @@ h2 {
 footer {
   background-color: #5c0303;
   color: #f0e6dc;
-  padding: 1.6rem 0;
+  padding: 1.8rem 0;
   font-size: 0.95rem;
   text-align: center;
   user-select: none;
@@ -411,14 +411,30 @@ footer {
   margin-bottom: 0.25rem;
 }
 
-/* Responsive */
+/* Responsive Styling */
+
+/* Medium tablets and below */
 @media (max-width: 900px) {
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1.15rem;
+  }
+
   .cards {
     gap: 2rem;
   }
 }
 
+/* Tablets and large phones */
 @media (max-width: 680px) {
+  /* Navigation */
   .nav-menu {
     display: none;
   }
@@ -434,5 +450,69 @@ footer {
     border-radius: 0;
     padding: 1.5rem 2rem;
     box-shadow: none;
+  }
+
+  /* Hero */
+  .hero {
+    height: 50vh;
+    min-height: 300px;
+    max-height: none;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    padding: 0.7rem 2rem;
+    font-size: 1rem;
+  }
+
+  /* Cards stack vertically */
+  .cards {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem;
+  }
+
+  .card h3 {
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  /* About, Catering, Contact text smaller */
+  .about-section p,
+  .catering-section p,
+  .contact-section p,
+  .contact-section ul {
+    font-size: 1rem;
+  }
+
+  /* Footer smaller */
+  footer {
+    font-size: 0.85rem;
+    padding: 1.25rem 0;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
   }
 }
