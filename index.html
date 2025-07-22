@@ -1,131 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Syndal Bakery - Glen Waverley</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Syndal Bakery - Glen Waverley | Fresh Breads, Pastries & Coffee</title>
+    <meta name="description" content="Syndal Bakery in Glen Waverley, Melbourne offers freshly baked breads, delicious pastries, coffee, and catering services. Discover our famous Banh Mi and daily specials!" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans&display=swap" rel="stylesheet" />
+    <!-- Updated Font Awesome to include regular icons for empty stars -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/regular.min.css">
 
-  <!-- Animate on Scroll Library -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a href="#" class="logo-link" aria-label="Syndal Bakery Home">
-        <img src="logo.png" alt="Syndal Bakery Logo" class="header-logo" />
-      </a>
+    <header class="site-header" id="site-header">
+        <div class="container header-inner">
+            <a href="#" class="logo-link" aria-label="Syndal Bakery Home">
+                <img src="logo.png" alt="Syndal Bakery Logo" class="header-logo large-logo" />
+            </a>
 
-      <nav class="nav" role="navigation" aria-label="Primary Navigation">
-        <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="hamburger"></span>
-        </button>
-        <ul class="nav-menu" id="primary-menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#products">Popular Items</a></li>
-          <li><a href="#catering">Catering</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+            <nav class="nav" role="navigation" aria-label="Primary Navigation">
+                <button class="nav-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu" id="primary-menu">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#menu-highlights">Menu Highlights</a></li>
+                    <li><a href="#daily-specials">Daily Specials</a></li>
+                    <li><a href="#catering">Catering</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <section class="hero" aria-label="Hero Banner">
-    <img src="banner.png" alt="Fresh bread and pastries at Syndal Bakery" class="hero-image" />
-    <div class="hero-overlay"></div>
-    <div class="hero-text" role="banner">
-      <h1>Welcome to <span class="highlight">Syndal Bakery</span></h1>
-      <p>Glen Waverley's favourite local bakery since forever</p>
-      <a href="#products" class="btn-primary">Explore Our Bakery</a>
-    </div>
-  </section>
-
-  <main>
-    <section id="about" class="section about-section" data-aos="fade-up" tabindex="0">
-      <div class="container">
-        <h2>About Syndal Bakery</h2>
-        <p>
-          Located at 242 Blackburn Rd, Glen Waverley, Syndal Bakery has been serving freshly baked breads, delicious pastries, and your favourite coffee since day one. We pride ourselves on quality, local flavours, and community spirit.
-        </p>
-        <p>
-          Our friendly team wakes up early every day (except Sundays) to bake fresh products you can trust and love.
-        </p>
-      </div>
+    <section class="hero" aria-label="Hero Banner">
+        <img src="banner.png" alt="Fresh bread and pastries at Syndal Bakery" class="hero-image" />
+        <div class="hero-overlay"></div>
+        <div class="hero-text" role="banner">
+            <h1 class="animate-text-reveal visible">Welcome to <span class="highlight">Syndal Bakery</span></h1>
+            <p class="animate-text-reveal delay-1 visible">Glen Waverley's favourite local bakery since forever</p>
+            <a href="#menu-highlights" class="btn-primary animate-fade-in delay-2 visible">Explore Our Delicious Menu</a>
+        </div>
     </section>
 
-    <section id="products" class="section products-section" data-aos="fade-up" tabindex="0">
-      <div class="container">
-        <h2>Popular Items</h2>
-        <div class="cards">
-          <article class="card" tabindex="0">
-            <img src="bahnmi.png" alt="Vietnamese Banh Mi Sandwich" />
-            <h3>Banh Mi Sandwich</h3>
-            <p>A deliciously fresh, crunchy, and flavour-packed Vietnamese sandwich made daily with love.</p>
-          </article>
-          <article class="card" tabindex="0">
-            <img src="coffee.png" alt="Freshly brewed coffee" />
-            <h3>Coffee</h3>
-            <p>Rich, aromatic coffee brewed fresh each morning to perfectly complement your pastry or meal.</p>
-          </article>
-          <article class="card" tabindex="0">
-            <img src="meatpie.png" alt="Traditional meat pie" />
-            <h3>Meat Pie</h3>
-            <p>Classic Aussie meat pie baked fresh with quality ingredients and flaky pastry.</p>
-          </article>
+    <main>
+        
+        <section id="menu-highlights" class="section products-section" data-aos="fade-up">
+            <div class="container">
+                <h2>Our Menu Highlights</h2>
+                <p class="section-description">Discover some of our customer favourites, from savoury delights to the perfect coffee.</p>
+                <div class="cards">
+                    <article class="card" tabindex="0" data-item="bahnmi">
+                        <img src="bahnmi.png" alt="Vietnamese Banh Mi Sandwich" />
+                        <h3>Banh Mi Sandwich</h3>
+                        <p>A deliciously fresh, crunchy, and flavour-packed Vietnamese sandwich made daily with love.</p>
+                        <button class="btn-secondary quick-view-btn" data-item="bahnmi">View Details</button>
+                    </article>
+                    <article class="card" tabindex="0" data-item="coffee">
+                        <img src="coffee.png" alt="Freshly brewed coffee" />
+                        <h3>Fresh Coffee</h3>
+                        <p>Rich, aromatic coffee brewed fresh each morning to perfectly complement your pastry or meal.</p>
+                        <button class="btn-secondary quick-view-btn" data-item="coffee">View Details</button>
+                    </article>
+                    <article class="card" tabindex="0" data-item="meatpie">
+                        <img src="meatpie.png" alt="Traditional meat pie" />
+                        <h3>Variery of meat pie's</h3>
+                        <p>Meat pie's baked fresh everyday with quality ingredients and flaky pastry – a true favourite!</p>
+                        <button class="btn-secondary quick-view-btn" data-item="meatpie">View Details</button>
+                    </article>
+                    <article class="card" tabindex="0" data-item="pastries">
+                        <img src="images/fresh-pastries.jpg" alt="Assortment of fresh pastries" />
+                        <h3>Fresh Pastries</h3>
+                        <p>Indulge in our delightful selection of croissants, muffins, tarts, and other sweet treats.</p>
+                        <button class="btn-secondary quick-view-btn" data-item="pastries">View Details</button>
+                    </article>
+                    <article class="card" tabindex="0" data-item="breads">
+                        <img src="images/artisan-breads.jpg" alt="Artisan loaves of bread" />
+                        <h3>Breads</h3>
+                        <p>From White Loaf to sourdough to baguettes, our freshly baked breads are perfect for any meal or occasion.</p>
+                        <button class="btn-secondary quick-view-btn" data-item="breads">View Details</button>
+                    </article>
+                </div>
+                <div class="text-center mt-4">
+                       <a href="menu.html" class="btn-primary">View Our Full Menu</a>
+                </div>
+            </div>
+        </section>
+
+     
+
+       <section id="catering" class="section catering-section" data-aos="fade-up">
+  <div class="container">
+    <div class="catering-content-grid">
+      <div class="catering-text">
+        <h2>Catering Services</h2>
+        <p>Planning a special event or gathering? Syndal Bakery offers bespoke catering services with a delectable range of <strong>fresh breads, savoury pastries, delicious sandwiches, and sweet treats</strong>. We craft everything with the same quality and care you expect from our bakery.</p>
+        <p>Let us make your next event deliciously memorable. Whether it's a corporate lunch or a family celebration, our fresh and delightful options are sure to impress your guests.</p>
+        <p>For inquiries and to tailor a menu to your needs, please contact us directly.</p>
+        <div class="call-button">
+          <a href="tel:+61398020816" class="btn-primary" aria-label="Call Syndal Bakery to discuss catering options">Call Us to Discuss Catering</a>
         </div>
       </div>
-    </section>
 
-    <section id="catering" class="section catering-section" data-aos="fade-up" tabindex="0">
-      <div class="container">
-        <h2>Catering Services</h2>
-        <p>
-          Planning a special event or business meeting? Syndal Bakery offers catering with fresh breads, savouries, and sweet treats to impress your guests.
-        </p>
-        <p class="call-button">
-          <a href="tel:+61398020816" aria-label="Call Syndal Bakery for catering booking">(03) 9802 0816 - Book Catering Now</a>
-        </p>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-section" data-aos="fade-up" tabindex="0">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <ul>
-          <li><strong>Address:</strong> 242 Blackburn Rd, Glen Waverley VIC 3150</li>
-          <li><strong>Phone:</strong> <a href="tel:+61398020816" class="external-link">(03) 9802 0816</a></li>
-          <li><strong>Hours:</strong></li>
-          <ul>
-            <li>Monday: 5:30 am – 4:30 pm</li>
-            <li>Tuesday: 5:30 am – 4:30 pm</li>
-            <li>Wednesday: 5:30 am – 4:30 pm</li>
-            <li>Thursday: 5:30 am – 4:30 pm</li>
-            <li>Friday: 5:30 am – 4:30 pm</li>
-            <li>Saturday: 5:30 am – 3:30 pm</li>
-            <li>Sunday: Closed</li>
-          </ul>
-        </ul>
-        <p>Follow us on <a href="https://www.facebook.com/syndalbakery/" target="_blank" rel="noopener" class="external-link">Facebook</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <p>&copy; 2025 Syndal Bakery. All rights reserved.</p>
-      <p>Designed by Harrison Rayner</p>
+      <!-- Updated Catering Image Gallery -->
+     <div class="catering-gallery">
+  <div class="gallery-container">
+    <div class="gallery-item" tabindex="0">
+      <img src="sandwichplatter.png" alt="A gourmet sandwich platter with various fillings, neatly arranged." />
+      <div class="label">Gourmet Sandwich Platters</div>
     </div>
-  </footer>
+    <div class="gallery-item" tabindex="0">
+      <img src="fruitplatter.png" alt="A vibrant fresh fruit platter with sliced melon, berries, and grapes." />
+      <div class="label">Fresh Fruit Platters</div>
+    </div>
+    <div class="gallery-item" tabindex="0">
+      <img src="wrapplatter.png" alt="Assorted savory wraps beautifully presented on a catering tray." />
+      <div class="label">Deluxe Wrap Platters</div>
+    </div>
+    <div class="gallery-item" tabindex="0">
+      <img src="fruitplatter2.png" alt="Another fresh fruit platter, artfully arranged with diverse fruits." />
+      <div class="label">Sweet Treat Boxes</div>
+    </div>
+  </div>
+</div>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script src="scripts.js"></script>
+    </div>
+  </div>
+</section>
+
+
+      <section id="testimonials" class="section testimonials-section" data-aos="fade-up">
+  <div class="container">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial-card" data-rating="4">
+        <p class="quote">"Loved the banh mi"</p>
+        <p class="author">- Ananda Sim (Local Guide)</p>
+      </div>
+      <div class="testimonial-card" data-rating="4">
+        <p class="quote">"Seems family run Vietnamese bakery. Has banh Mi, other filled sandwich and pies. Banh mi I bit bland, and grilled pork was a little skimpy on filling. But good for a local. Pies did look nice. Try next time"</p>
+        <p class="author">- Os Rich (Local Guide)</p>
+      </div>
+      <div class="testimonial-card" data-rating="5">
+        <p class="quote">"Came in quite frequently and must say that almost everything is super delicious, filling and the prices are ok too. I’ve had heaps of rolls and croissants here, never disappoint."</p>
+        <p class="author">- Rouven Grossmann (Local Guide)</p>
+      </div>
+      <div class="testimonial-card" data-rating="5">
+        <p class="quote">"Nicest staff, made my day."</p>
+        <p class="author">- Sophie Greig</p>
+      </div>
+      <div class="testimonial-card" data-rating="5">
+        <p class="quote">"Been getting coffee here for years, and toasties too. Tastes much better than Maccas! Their tuna/chicken salad is always fresh, banh mi is delicious."</p>
+        <p class="author">- Sweetpea Chan (Local Guide)</p>
+      </div>
+      <div class="testimonial-card" data-rating="5">
+        <p class="quote">"Syndal Bakery's banh mi is the best in Melbourne! Always fresh and full of flavor."</p>
+        <p class="author">- Sarah L.</p>
+      </div>
+      <div class="testimonial-card" data-rating="5">
+        <p class="quote">"Their coffee is my morning ritual. Perfect brew every time."</p>
+        <p class="author">- Mark T.</p>
+      </div>
+      <div class="testimonial-card" data-rating="5">
+        <p class="quote">"The meat pies are a classic. Flaky pastry and delicious filling, exactly how it should be!"</p>
+        <p class="author">- David R.</p>
+      </div>
+      <div class="testimonial-card" data-rating="5">
+        <p class="quote">"Amazing quality and friendly service. Syndal Bakery is a true gem in Glen Waverley."</p>
+        <p class="author">- Emily H.</p>
+      </div>
+    </div>
+    <div class="testimonial-nav">
+      <button class="prev-testimonial" aria-label="Previous testimonial">❮</button>
+      <div class="testimonial-dots"></div>
+      <button class="next-testimonial" aria-label="Next testimonial">❯</button>
+    </div>
+  </div>
+</section>
+
+
+
+        <section id="contact" class="section contact-section" data-aos="fade-up">
+            <div class="container">
+                <h2>Visit Us or Get in Touch!</h2>
+                <div class="contact-content">
+                    <div class="contact-details">
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 242 Blackburn Rd, Glen Waverley VIC 3150</li>
+                            <li><i class="fas fa-phone"></i> <strong>Phone:</strong> <a href="tel:+61398020816" class="external-link">(03) 9802 0816</a></li>
+                            <li class="open-status"></li> <li><i class="fas fa-clock"></i> <strong>Trading Hours:</strong></li>
+                            <li data-day="1">Monday: 5:30 am – 4:30 pm</li>
+                            <li data-day="2">Tuesday: 5:30 am – 4:30 pm</li>
+                            <li data-day="3">Wednesday: 5:30 am – 4:30 pm</li>
+                            <li data-day="4">Thursday: 5:30 am – 4:30 pm</li>
+                            <li data-day="5">Friday: 5:30 am – 4:30 pm</li>
+                            <li data-day="6">Saturday: 5:30 am – 3:30 pm</li>
+                            <li data-day="0">Sunday: Closed</li>
+                        </ul>
+                        <div class="google-maps-embed mt-4">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6298.821397764111!2d145.14832099999998!3d-37.874077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad63f8d67589f25%3A0x19a4800a396f1bee!2sSyndal%20Bakery!5e0!3m2!1sen!2sau!4v1753168696846!5m2!1sen!2sau" width="949" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </iframe>
+                            <p class="text-center mt-2"><a href="https://www.google.com/maps/dir/?api=1&destination=Syndal+Bakery+242+Blackburn+Rd+Glen+Waverley+VIC+3150" target="_blank" rel="noopener" class="btn-secondary">Get Directions</a></p>
+                        </div>
+                    </div>
+                    <!-- The "Send Us a Message" form has been removed from here -->
+                </div>
+                <div class="social-media-icons"> <h3>Connect With Us!</h3>
+                    <a href="https://www.facebook.com/syndalbakery/" target="_blank" rel="noopener" aria-label="Syndal Bakery Facebook Page"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <p>© 2025 Syndal Bakery. All rights reserved.</p>
+            <p>Designed by Harrison Rayner</p>
+            <ul class="footer-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <div id="quickViewModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <span class="close-button" aria-label="Close product details">×</span>
+            <h3 id="modalTitle"></h3>
+            <img id="modalImage" src="" alt="" />
+            <p id="modalDescription"></p>
+            <p id="modalPrice"></p>
+            <button class="btn-primary close-button-bottom">Close</button>
+        </div>
+    </div>
+
+    <button id="scrollToTopBtn" class="scroll-to-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="scripts.js"></script>
 
 </body>
 </html>
