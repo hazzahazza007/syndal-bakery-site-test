@@ -76,34 +76,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const productData = {
         bahnmi: {
-            title: "Banh Mi Sandwich",
+            title: "Banh Mi Roll",
             image: "bahnmi.png",
             description: "Our signature Vietnamese Banh Mi, featuring a crispy baguette, savoury pate, flavourful cold cuts (or your choice of grilled chicken/pork), fresh herbs, pickled vegetables, and a hint of chilli.",
-            price: "$9.50"
+            
         },
         coffee: {
             title: "Artisan Coffee",
             image: "coffee.png",
             description: "Experience our premium blend coffee, expertly brewed. Choose from Espresso, Latte, Cappuccino, Flat White, or Iced Coffee. Perfect for your morning boost or an afternoon treat.",
-            price: "From $4.00"
+           
         },
         meatpie: {
             title: "Classic Meat Pie",
             image: "meatpie.png",
             description: "A true Aussie classic! Our golden-baked meat pie is filled with rich, tender beef in a savoury gravy, encased in our famous flaky pastry. A hearty and satisfying meal.",
-            price: "$6.00"
+            
         },
         pastries: {
             title: "Fresh Pastries & Croissants",
             image: "images/fresh-pastries.jpg",
             description: "Indulge in our exquisite range of freshly baked pastries, including buttery croissants, pain au chocolat, fruit tarts, and cinnamon scrolls. Perfect with your coffee!",
-            price: "From $4.50"
+            
         },
         breads: {
             title: "Artisan Breads",
             image: "images/artisan-breads.jpg",
             description: "Our selection of artisan breads is baked daily using traditional methods. From rustic sourdough to crusty baguettes, ideal for sandwiches or as a delicious accompaniment to any meal.",
-            price: "From $5.00"
+           
         }
     };
 
@@ -117,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 modalImage.src = item.image;
                 modalImage.alt = item.title;
                 modalDescription.textContent = item.description;
-                modalPrice.textContent = `Price: ${item.price}`;
                 quickViewModal.classList.add('active'); // Added 'active' class to show modal
                 document.body.style.overflow = 'hidden'; // Prevent body scroll
             }
