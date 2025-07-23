@@ -7,6 +7,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Work+Sans&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="menu.css" />
 </head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".category-btn");
+    const sections = document.querySelectorAll(".menu-section");
+
+    function activateCategory(target) {
+      // Deactivate all
+      buttons.forEach(btn => btn.classList.remove("active"));
+      sections.forEach(section => section.style.display = "none");
+
+      // Activate selected
+      const targetBtn = document.querySelector(`.category-btn[data-target="${target}"]`);
+      const targetSection = document.getElementById(target);
+      if (targetBtn && targetSection) {
+        targetBtn.classList.add("active");
+        targetSection.style.display = "block";
+      }
+    }
+
+    // Handle button clicks
+    buttons.forEach(button => {
+      button.addEventListener("click", function () {
+        const target = this.getAttribute("data-target");
+        history.replaceState(null, null, `#${target}`); // Update URL
+        activateCategory(target);
+      });
+    });
+
+    // Handle page load with hash
+    const hash = window.location.hash.substring(1); // Remove #
+    const initialCategory = hash || "drinks";
+    activateCategory(initialCategory);
+  });
+</script>
+
 <body>
 
 <header class="header">
@@ -23,7 +58,7 @@
   <button class="category-btn" data-target="bread">Bread</button>
   <button class="category-btn" data-target="pastries">Pastries</button>
   <button class="category-btn" data-target="sweet-treats">Sweet Treats & Misc</button>
-  <button class="category-btn" data-target="salads-bowls">Salads & Bowls</button>
+  <button class="category-btn" data-target="salads">Salads</button>
   <button class="category-btn" data-target="specials">Specials</button>
 </nav>
 
@@ -195,63 +230,97 @@
 <!-- Sweet Treats & Misc -->
 <section id="sweet-treats" class="menu-section" aria-label="Sweet Treats and Miscellaneous">
   <h2>Sweet Treats & Miscellaneous</h2>
+
+  <h3>Scrolls</h3>
   <ul class="menu-list">
-    <li>Apple Turn Over</li>
+    <li>Apple Scroll</li>
     <li>Jam Scroll</li>
     <li>Coffee Scroll</li>
     <li>Custard Scroll</li>
-    <li>Apple Scroll</li>
-    <li>Cupcake</li>
-    <li>Muffin (Apple, Blueberry, Choc Chip, Chocolate)</li>
-    <li>Florentine</li>
-    <li>Gingerbread Man</li>
+  </ul>
+
+  <h3>Donuts</h3>
+  <ul class="menu-list">
     <li>Cinnamon Donut</li>
     <li>Jam Donut</li>
     <li>Custard/Nutella Donut</li>
     <li>Iced Jam Donut</li>
     <li>Iced Ring Donut</li>
-    <li>Caramel Slice</li>
-    <li>Hedgehog Slice</li>
+  </ul>
+
+  <h3>Muffins & Cupcakes</h3>
+  <ul class="menu-list">
+    <li>Cupcake</li>
+    <li>Muffin (Apple, Blueberry, Choc Chip, Chocolate)</li>
+  </ul>
+
+  <h3>Cookies & Biscuits</h3>
+  <ul class="menu-list">
     <li>Choc Chip Cookie</li>
     <li>Smartie Cookie</li>
+    <li>Gingerbread Man</li>
     <li>Assorted Biscuit</li>
     <li>Assorted Picture Biscuit</li>
-    <li>Neenish Tart</li>
-    <li>Jam/Lemon Tart</li>
-    <li>Fruit Tart</li>
     <li>Melting Moment</li>
     <li>YoYo</li>
     <li>Chocolate Finger</li>
-    <li>Cannoli</li>
-    <li>Eclair</li>
-    <li>Fruit Salad</li>
+  </ul>
+
+  <h3>Cakes & Bar Cakes</h3>
+  <ul class="menu-list">
+    <li>Apple Cake</li>
+    <li>Carrot Bar Cake</li>
+    <li>Orange Poppy Seed</li>
+    <li>Red Velvet Slice</li>
+    <li>Mud Cake</li>
+    <li>Flourless Orange & Chia Cake Slice (Gluten Free)</li>
+    <li>Lamington</li>
+  </ul>
+
+  <h3>Tarts & Flans</h3>
+  <ul class="menu-list">
+    <li>Neenish Tart</li>
+    <li>Jam/Lemon Tart</li>
+    <li>Fruit Tart</li>
+    <li>Custard Tart</li>
+    <li>Toffee Caramel/Cremirca Lemon Tart</li>
+    <li>Fruit Flan</li>
+  </ul>
+
+  <h3>Slices</h3>
+  <ul class="menu-list">
+    <li>Apple Slice</li>
+    <li>Apricot Slice</li>
+    <li>Caramel Slice</li>
+    <li>Hedgehog Slice</li>
     <li>Oreo Cheesecake Slice</li>
     <li>French Vanilla Slice</li>
     <li>Vanilla Slice</li>
-    <li>Flourless Orange & Chia Cake Slice (Gluten Free)</li>
-    <li>Red Velvet Slice</li>
     <li>Lemon Slice</li>
     <li>Jelly Slice</li>
-    <li>Mud Cake</li>
-    <li>Lamington</li>
-    <li>Toffee Caramel/Cremirca Lemon Tart</li>
-    <li>Custard Tart</li>
+  </ul>
+
+  <h3>Pastries & Filled</h3>
+  <ul class="menu-list">
+    <li>Apple Turn Over</li>
     <li>Apple Turn Over With Cream</li>
-    <li>Raspberry/Chocolate Snowball</li>
-    <li>Fruit Flan</li>
     <li>Cream Bun</li>
-    <li>Apple Slice</li>
-    <li>Apricot Slice</li>
-    <li>Apple Cake</li>
+    <li>Cannoli</li>
+    <li>Eclair</li>
+    <li>Raspberry/Chocolate Snowball</li>
     <li>Small Apple Pie</li>
-    <li>Carrot Bar Cake</li>
-    <li>Orange Poppy Seed</li>
+  </ul>
+
+  <h3>Other</h3>
+  <ul class="menu-list">
+    <li>Fruit Salad</li>
+    <li>Florentine</li>
   </ul>
 </section>
 
-<!-- Salads & Bowls -->
-<section id="salads-bowls" class="menu-section" aria-label="Salads and Bowls">
-  <h2>Salads & Bowls</h2>
+<!-- Salads -->
+<section id="salads" class="menu-section" aria-label="Salads">
+  <h2>Salads</h2>
   <ul class="menu-list">
     <li>Tuna Salad Bowl</li>
     <li>Chicken Salad Bowl</li>
@@ -263,4 +332,18 @@
 
 <script src="menu.js"></script>
 </body>
-</html>
+</html><script>
+  // Show selected menu category from URL hash
+  function showCategoryByHash() {
+    const hash = window.location.hash.substring(1);
+    const categories = document.querySelectorAll('.menu-category');
+    categories.forEach(cat => cat.style.display = 'none');
+
+    const active = document.getElementById(hash) || document.getElementById('sandwiches');
+    active.style.display = 'block';
+    active.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  window.addEventListener('DOMContentLoaded', showCategoryByHash);
+</script>
+

@@ -1318,4 +1318,6 @@ footer p {
 .catering-section .call-button a:hover {
   background-color: #b72b24; /* Darker red on hover */
   box-shadow: var(--shadow-md);
+}html {
+  scroll-behavior: smooth;
 }
